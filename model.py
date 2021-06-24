@@ -6,6 +6,7 @@ Created by Justine Paul Sanchez Vitan.
 Copyright © 2021 Justine Paul Sanchez Vitan. All rights reserved.
 """
 
+import matplotlib.pyplot as plt
 from tensorflow.keras import Sequential
 from tensorflow.keras import layers
 from tensorflow.keras.callbacks import ModelCheckpoint
@@ -33,6 +34,24 @@ def create_model():
 
 
 def train_model(data, epochs, checkpoint_location):
+    def plot_history(history):
+        fig, axs = plt.subplots(1, 2, figsize=(10, 5))
+        axs[0].plot(history['loss'], label='training loss')
+        axs[0].plot(history['val_loss'], label='validation loss')
+        axs[0].legend(loc='upper left')
+        axs[0].set_title('training data vs validation data')
+
+        axs[1].plot(history['accuracy'], label='testing accuracy')
+        axs[1].plot(history['val_accuracy'], label='validation accuracy')
+        axs[1].set_ylim([0, 1])
+        axs[1].legend(loc='upper left')
+        axs[1].set_title('accuracy')
+
+        axs.flat[0].set(xlabel='epochs', ylabel='loss')
+        axs.flat[1].set(xlabel='epochs', ylabel='accuracy')
+
+        plt.show()
+
     model = create_model()
 
     training_feature = data[0]
@@ -44,6 +63,7 @@ def train_model(data, epochs, checkpoint_location):
 
     history = model.fit(training_feature, training_label, validation_data=(validation_feature, validation_label),
                         epochs=epochs, callbacks=[callback], verbose=1).history
+    plot_history(history)
 
     return model
 

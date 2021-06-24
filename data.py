@@ -30,7 +30,7 @@ class Data:
         feature_list = []
         label_list = []
 
-        for i in sequence[:10]:
+        for i in sequence:
             suite_id = img_info_df['suite_id'][i]
             sample_id = img_info_df['sample_id'][i]
             code = img_info_df['code'][i]

@@ -23,9 +23,12 @@ def predict(img_location):
     cnn = model.load_model(checkpoint_location)
 
     img_ndarray = data.img_to_ndarray(img_location).reshape(-1, 64, 64, 1)
-    prediction = data.denormalize_value(np.argmax(cnn.predict(img_ndarray)))
+    prediction = cnn.predict(img_ndarray)
+    argmax = np.argmax(prediction)
+    probability = prediction[0][argmax]
 
-    data.inspect_img(img_ndarray, 'Prediction: ' + str(prediction))
+    data.inspect_img(img_ndarray,
+                     'Predicted Value: {:d}'.format(data.denormalize_value(argmax)))
 
 
 predict('data/test/test1.jpg')

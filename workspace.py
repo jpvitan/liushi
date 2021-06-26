@@ -31,4 +31,11 @@ def predict(img_location):
                      'Predicted Value: {:d}'.format(data.denormalize_value(argmax)))
 
 
-predict('data/test/test1.jpg')
+def evaluate(checkpoint_location, count):
+    img_data = data.Data(size_limit=count).extract_data()
+
+    cnn = model.load_model(checkpoint_location)
+    cnn.evaluate(img_data[0], img_data[1])
+
+
+evaluate(checkpoint_location, 20)

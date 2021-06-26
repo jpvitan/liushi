@@ -16,16 +16,20 @@ from PIL import Image
 
 class Data:
 
-    def __init__(self, shuffle=True):
+    def __init__(self, shuffle=True, size_limit=None):
         img_folder = 'data/train'
         img_info = 'data/train/info.csv'
 
         img_info_df = pd.read_csv(img_info)
         img_info_df_rows = img_info_df.shape[0]
 
+        if size_limit is not None:
+            img_info_df_rows = size_limit
+
         sequence = np.random.permutation(img_info_df_rows)
+
         if not shuffle:
-            sequence = np.arange(0, img_info_df_rows)
+            np.arange(0, img_info_df_rows)
 
         feature_list = []
         label_list = []

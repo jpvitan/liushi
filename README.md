@@ -49,3 +49,10 @@ _________________________________________________________________
 
 
 ![Figure 4](media/figure4.png)
+
+
+----------------------------------------
+Written by Justine Paul Sanchez Vitan.
+
+
+Copyright © 2021 Justine Paul Sanchez Vitan. All rights reserved.

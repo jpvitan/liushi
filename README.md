@@ -10,7 +10,8 @@ TensorFlow application that could recognize handwritten Chinese numerals using a
 ![Figure 2](media/figure2.png)
 
 
-## Network Architecture
+## Convolutional Neural Network
+### Architecture
 ```
 Model: "sequential"
 _________________________________________________________________
@@ -45,10 +46,32 @@ _________________________________________________________________
 ```
 
 
-## Network Performance
+### Performance
+
+
+![Figure 3](media/figure3.png)
+
+
+### Activation Functions
+#### Rectified Linear Unit (ReLU)
+ReLU is used on all convolutional and dense layers except for the output layer (last dense layer).
 
 
 ![Figure 4](media/figure4.png)
+
+
+#### Softmax
+Since we are predicting a class of probabilities, we are going to use the Softmax activation function for our output layer.
+
+
+![Figure 5](media/figure5.png)
+
+
+## Data
+[Kaggle Dataset](https://www.kaggle.com/gpreda/chinese-mnist)
+
+
+![Figure 6](media/figure6.png)
 
 
 ----------------------------------------

@@ -23,13 +23,13 @@ class Data:
         img_info_df = pd.read_csv(img_info)
         img_info_df_rows = img_info_df.shape[0]
 
-        if size_limit is not None:
-            img_info_df_rows = size_limit
-
         sequence = np.random.permutation(img_info_df_rows)
 
         if not shuffle:
-            np.arange(0, img_info_df_rows)
+            sequence = np.arange(0, img_info_df_rows)
+
+        if size_limit is not None:
+            sequence = sequence[:size_limit]
 
         feature_list = []
         label_list = []

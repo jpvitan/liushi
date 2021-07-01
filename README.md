@@ -74,6 +74,39 @@ Since we are predicting a class of probabilities, we are going to use the Softma
 ![Figure 6](media/figure6.png)
 
 
+## Dependencies
+
+
+### TensorFlow
+```
+$ pip install tensorflow==2.0.0
+```
+
+
+### NumPy
+```
+$ pip install numpy==1.9.1
+```
+
+
+### Matplotlib
+```
+$ pip install matplotlib==3.3.1
+```
+
+
+### pandas
+```
+$ pip install pandas==1.1.3
+```
+
+
+### Pillow
+```
+$ pip install Pillow==7.2.0
+```
+
+
 ----------------------------------------
 Written by Justine Paul Sanchez Vitan.
 

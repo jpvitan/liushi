@@ -37,3 +37,5 @@ def evaluate(checkpoint_location, count):
     cnn = model.load_model(checkpoint_location)
     cnn.evaluate(img_data[0], img_data[1])
 
+
+predict('data/test/test1.jpg')

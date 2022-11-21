@@ -87,4 +87,4 @@ Since we are predicting a class of probabilities, we are going to use the Softma
 Developed and Designed by Justine Paul Sanchez Vitan.
 
 
-Copyright © 2022 Justine Paul Sanchez Vitan. All rights reserved.
+Copyright © 2021 Justine Paul Sanchez Vitan. All rights reserved.

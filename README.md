@@ -1,17 +1,16 @@
-# tf2-chinese-mnist
-
-
-TensorFlow application that could recognize handwritten Chinese numerals using a custom CNN architecture.
+<h1 align="center">tf2-chinese-mnist</h1>
+<p align="center">TensorFlow application that could recognize handwritten Chinese numerals using a custom CNN architecture.</p>
 
 
 ![Figure 1](media/figure1.png)
 
 
-![Figure 2](media/figure2.png)
-
-
 ## Convolutional Neural Network
+
+
 ### Architecture
+
+
 ```
 Model: "sequential"
 _________________________________________________________________
@@ -53,7 +52,11 @@ _________________________________________________________________
 
 
 ### Activation Functions
+
+
 #### Rectified Linear Unit (ReLU)
+
+
 ReLU is used on all convolutional and dense layers except for the output layer (last dense layer).
 
 
@@ -61,6 +64,8 @@ ReLU is used on all convolutional and dense layers except for the output layer (
 
 
 #### Softmax
+
+
 Since we are predicting a class of probabilities, we are going to use the Softmax activation function for our output layer.
 
 
@@ -68,47 +73,18 @@ Since we are predicting a class of probabilities, we are going to use the Softma
 
 
 ## Data
+
+
 [Kaggle Dataset](https://www.kaggle.com/gpreda/chinese-mnist)
 
 
 ![Figure 6](media/figure6.png)
 
 
-## Dependencies
+## Copyright
 
 
-### TensorFlow
-```
-$ pip install tensorflow==2.0.0
-```
+Developed and Designed by Justine Paul Sanchez Vitan.
 
 
-### NumPy
-```
-$ pip install numpy==1.9.1
-```
-
-
-### Matplotlib
-```
-$ pip install matplotlib==3.3.1
-```
-
-
-### pandas
-```
-$ pip install pandas==1.1.3
-```
-
-
-### Pillow
-```
-$ pip install Pillow==7.2.0
-```
-
-
-----------------------------------------
-Written by Justine Paul Sanchez Vitan.
-
-
-Copyright © 2021 Justine Paul Sanchez Vitan. All rights reserved.
+Copyright © 2022 Justine Paul Sanchez Vitan. All rights reserved.

@@ -50,6 +50,12 @@ _________________________________________________________________
 ![Performance](media/figure3.png)
 
 
+## 📊 Data
+
+
+[Kaggle Dataset](https://www.kaggle.com/gpreda/chinese-mnist)
+
+
 ## 🛠️ Software
 
 

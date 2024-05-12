@@ -47,7 +47,7 @@ _________________________________________________________________
 ### Performance
 
 
-![Performance](media/figure3.png)
+![Performance](media/figure2.png)
 
 
 ## 📊 Data

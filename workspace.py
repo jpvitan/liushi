@@ -18,7 +18,7 @@ import numpy as np
 import data
 import model
 
-checkpoint_location = 'data/checkpoint/train.ckpt'
+checkpoint_location = 'resources/checkpoint/train.ckpt'
 
 
 def train():

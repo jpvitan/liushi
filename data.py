@@ -23,10 +23,7 @@ from PIL import Image
 
 class Data:
 
-    def __init__(self, shuffle=True, size_limit=None):
-        img_folder = 'data/train'
-        img_info = 'data/train/info.csv'
-
+    def __init__(self, img_folder, img_info, shuffle=True, size_limit=None):
         img_info_df = pd.read_csv(img_info)
         img_info_df_rows = img_info_df.shape[0]
 

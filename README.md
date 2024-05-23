@@ -1,11 +1,10 @@
-<h1 align="center">tf2-chinese-mnist</h1>
-<p align="center">TensorFlow application that could recognize handwritten Chinese numerals using a custom CNN architecture.</p>
+![LiuShi](resources/images/figures/six.png)
 
 
-![Figure 1](media/figure1.png)
+**LiuShi** is a deep-learning project that utilizes a custom-made Convolutional Neural Network (CNN) architecture to recognize handwritten Chinese numerals.
 
 
-## Convolutional Neural Network
+## 🧠 Model
 
 
 ### Architecture
@@ -48,43 +47,25 @@ _________________________________________________________________
 ### Performance
 
 
-![Figure 3](media/figure3.png)
+![Performance](resources/images/figures/performance.png)
 
 
-### Activation Functions
-
-
-#### Rectified Linear Unit (ReLU)
-
-
-ReLU is used on all convolutional and dense layers except for the output layer (last dense layer).
-
-
-![Figure 4](media/figure4.png)
-
-
-#### Softmax
-
-
-Since we are predicting a class of probabilities, we are going to use the Softmax activation function for our output layer.
-
-
-![Figure 5](media/figure5.png)
-
-
-## Data
+## 📊 Data
 
 
 [Kaggle Dataset](https://www.kaggle.com/gpreda/chinese-mnist)
 
 
-![Figure 6](media/figure6.png)
+## 🛠️ Software
 
 
-## Copyright
+### Developer
 
 
-Developed and Designed by Justine Paul Sanchez Vitan.
+Built by [Justine Paul Vitan](https://jpvitan.com) as a solo project to demonstrate his capabilities in developing deep-learning applications with TensorFlow and Keras. The source code of this project is open and available to the public via GitHub for transparency and open-source collaboration.
 
 
-Copyright © 2021 Justine Paul Sanchez Vitan. All rights reserved.
+### License
+
+
+This project is under the [MIT license](https://github.com/jpvitan/liushi/blob/master/LICENSE). Please read the terms and conditions stated within the license before attempting any modification or distribution of the software.

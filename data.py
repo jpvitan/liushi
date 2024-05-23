@@ -1,9 +1,16 @@
 """
-tf2-chinese-mnist
-data.py
 
-Created by Justine Paul Sanchez Vitan.
-Copyright © 2021 Justine Paul Sanchez Vitan. All rights reserved.
+LiuShi
+A deep-learning project that utilizes a custom-made Convolutional Neural Network (CNN) architecture to recognize handwritten Chinese numerals.
+
+This project is under the MIT license.
+Please read the terms and conditions stated within the license before attempting any modification or distribution of the software.
+
+Copyright © 2024 Justine Paul Vitan. All rights reserved.
+
+License Information: https://github.com/jpvitan/liushi/blob/master/LICENSE
+Developer's Website: https://jpvitan.com/
+
 """
 
 import math
@@ -16,10 +23,7 @@ from PIL import Image
 
 class Data:
 
-    def __init__(self, shuffle=True, size_limit=None):
-        img_folder = 'data/train'
-        img_info = 'data/train/info.csv'
-
+    def __init__(self, img_folder, img_info, shuffle=True, size_limit=None):
         img_info_df = pd.read_csv(img_info)
         img_info_df_rows = img_info_df.shape[0]
 

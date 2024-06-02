@@ -22,7 +22,6 @@ from PIL import Image
 
 
 class Data:
-
     def __init__(self, img_folder, img_info, shuffle=True, size_limit=None):
         img_info_df = pd.read_csv(img_info)
         img_info_df_rows = img_info_df.shape[0]
@@ -39,14 +38,16 @@ class Data:
         label_list = []
 
         for i in sequence:
-            suite_id = img_info_df['suite_id'][i]
-            sample_id = img_info_df['sample_id'][i]
-            code = img_info_df['code'][i]
+            suite_id = img_info_df["suite_id"][i]
+            sample_id = img_info_df["sample_id"][i]
+            code = img_info_df["code"][i]
 
-            img_filename = '{:s}/input_{:d}_{:d}_{:d}.jpg'.format(img_folder, suite_id, sample_id, code)
+            img_filename = "{:s}/input_{:d}_{:d}_{:d}.jpg".format(
+                img_folder, suite_id, sample_id, code
+            )
 
             feature_list.append(img_to_ndarray(img_filename))
-            label_list.append(normalize_value(img_info_df['value'][i]))
+            label_list.append(normalize_value(img_info_df["value"][i]))
 
         self.feature_ndarray = np.array(feature_list).reshape(-1, 64, 64, 1)
         self.label_ndarray = np.array(label_list)

@@ -4,6 +4,10 @@
 **LiuShi** is a deep-learning project that utilizes a custom-made Convolutional Neural Network (CNN) architecture to recognize handwritten Chinese numerals.
 
 
+![Badge](https://img.shields.io/github/license/jpvitan/liushi)
+![Badge](https://img.shields.io/badge/code%20style-black-000000.svg)
+
+
 ## 🧠 Model
 
 

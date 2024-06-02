@@ -18,9 +18,9 @@ import numpy as np
 import data
 import model
 
-img_folder = 'resources/data'
-img_info = 'resources/data/info.csv'
-checkpoint_location = 'resources/checkpoint/train.ckpt'
+img_folder = "resources/data"
+img_info = "resources/data/info.csv"
+checkpoint_location = "resources/checkpoint/train.ckpt"
 
 
 def train():
@@ -36,8 +36,9 @@ def predict(img_location):
     argmax = np.argmax(prediction)
     probability = prediction[0][argmax]
 
-    data.inspect_img(img_ndarray,
-                     'Predicted Value: {:d}'.format(data.denormalize_value(argmax)))
+    data.inspect_img(
+        img_ndarray, "Predicted Value: {:d}".format(data.denormalize_value(argmax))
+    )
 
 
 def evaluate(checkpoint_location, count):
